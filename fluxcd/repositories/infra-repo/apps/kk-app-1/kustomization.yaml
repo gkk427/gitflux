@@ -1,0 +1,12 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kk-app-1
+  namespace: default
+spec:
+  interval: 1m
+  path: "./fluxcd/repositories/kk-app-1/deploy"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: kk-app-1

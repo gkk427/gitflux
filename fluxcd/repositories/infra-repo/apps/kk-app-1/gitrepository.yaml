@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: kk-app-1
+  namespace: default
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/gkk427/gitflux/
